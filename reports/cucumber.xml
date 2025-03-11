@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="6.868" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Login" name="Fazer login com usuario valido" time="6.533">
+<testsuite name="Cucumber" time="14.636" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Consulta Cliente" name="Fazer consulta de cliente com divida" time="10.058">
+<system-out><![CDATA[
+Dado que estou na pagina do recupera........................................passed
+Quando Clico em operacao....................................................passed
+E pesquiso pelo cliente.....................................................passed
+Entao consulta realizada com sucesso........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login valido" name="Fazer login com usuario valido" time="4.197">
 <system-out><![CDATA[
 Dado que estou na pagina de login...........................................passed
-Quando informo dados validos................................................passed
-E clico em logar............................................................passed
+Quando faço login com dados validos.........................................passed
 Entao realizo login com sucesso.............................................passed
 ]]></system-out>
 </testcase>

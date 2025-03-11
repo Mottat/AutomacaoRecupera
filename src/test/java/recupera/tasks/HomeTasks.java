@@ -1,6 +1,6 @@
 package recupera.tasks;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import recupera.pages.HomePage;
 
 import java.time.Duration;
+
+import static org.junit.Assert.assertEquals;
 
 public class HomeTasks extends HomePage {
     private final WebDriver driver;
@@ -24,23 +26,44 @@ public class HomeTasks extends HomePage {
                 .until(ExpectedConditions.visibilityOf(user));
     }
 
-    public void informarUser() {
+    public void loginSucesso() {
         user.click();
         user.sendKeys("AUTOM1");
-    }
 
-    public void informarpassword() {
         password.click();
         password.sendKeys("renner100");
-    }
 
-    public void clicarEmpresa() {
         empresaDropdown.click();
         empresaOption.click();
-    }
 
-    public void clicarLogar() {
         loginButton.click();
+
+//        try {
+//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//            Alert alerta = wait.until(ExpectedConditions.alertIsPresent());
+//
+//            if (alerta != null) {
+//                String mensagem = alerta.getText();
+//                System.out.println("Mensagem do alerta: " + mensagem);
+//
+//                assertEquals("LIC_RL006: O Operador já esta conectado no sistema.", mensagem);
+//
+//                alerta.accept();
+//
+//                user.clear();
+//                user.sendKeys("AUTOM2");
+//                password.clear();
+//                password.sendKeys("renner100");
+//                empresaDropdown.click();
+//                empresaOption.click();
+//                loginButton.click();
+//
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Nenhum alerta foi exibido.");
+//        }
+
     }
 
     public void aguardarBotaoSair() {
@@ -52,8 +75,5 @@ public class HomeTasks extends HomePage {
         sair.click();
     }
 
-    public void aguardarElementoVisivel(By by, int segundos) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(segundos));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
+
 }

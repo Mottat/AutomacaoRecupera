@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "recupera.steps",
-        tags = "@LoginExecution",
+        tags = "@LoginExecution or @ConsultaExecution", // or @AcordoExecution or @CancelaAcordoExecution
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-//        dryRun = false,
+        dryRun = false,
         plugin = {
                 "pretty",
                 "html:reports/cucumber.html",

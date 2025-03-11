@@ -1,11 +1,11 @@
 package recupera.steps;
 
-import io.cucumber.java.pt.E;
 import recupera.TestBase;
 import recupera.tasks.HomeTasks;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+
 
 public class HomeStep extends TestBase {
 
@@ -20,16 +20,9 @@ public class HomeStep extends TestBase {
         homeTasks.aguardarCampoUser();
     }
 
-    @Quando("informo dados validos")
-    public void informoDadosValidos() {
-        homeTasks.informarUser();
-        homeTasks.informarpassword();
-        homeTasks.clicarEmpresa();
-    }
-
-    @E("clico em logar")
-    public void clicoEmLogar() {
-        homeTasks.clicarLogar();
+    @Quando("faço login com dados validos")
+    public void facologincomdadosvalidos() {
+        homeTasks.loginSucesso();
     }
 
     @Entao("realizo login com sucesso")
@@ -38,13 +31,4 @@ public class HomeStep extends TestBase {
         homeTasks.clicarSair();
     }
 
-    private void trocarParaNovaJanela() {
-        String janelaOriginal = driver.getWindowHandle();
-        for (String janela : driver.getWindowHandles()) {
-            if (!janela.equals(janelaOriginal)) {
-                driver.switchTo().window(janela);
-                break;
-            }
-        }
-    }
 }
