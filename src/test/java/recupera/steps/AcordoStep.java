@@ -33,7 +33,7 @@ public class AcordoStep extends TestBase {
 
     @E("faço um acordo")
     public void facoUmAcordo() throws InterruptedException {
-        selectIframeOcorrencia();
+        selectIfrmAppPrinc();
 
         consultaTasks.codCliente();
         consultaTasks.bntConsult();
@@ -48,7 +48,7 @@ public class AcordoStep extends TestBase {
 
 //        consultaTasks.marcDivida();
 
-        selectcIframeParcelamento();
+        selectcCframe1();
 
         acordoTasks.aguardarBotaoConfirmar();
 
@@ -58,7 +58,7 @@ public class AcordoStep extends TestBase {
 
         acordoTasks.bntConf();
 
-        selectcIframeOcorrencia();
+        selectcCframe3();
 
         acordoTasks.insertOcorrencia();
         acordoTasks.bntConfOcorre();
@@ -66,7 +66,7 @@ public class AcordoStep extends TestBase {
         Thread.sleep(5000);
 
         defaultContent();
-        selectIframeOcorrencia();
+        selectIfrmAppPrinc();
     }
 
     @Entao("acordo criado com sucesso")

@@ -48,7 +48,7 @@ public class TestBase {
         }
     }
 
-    protected void selectIframeOcorrencia(){
+    protected void selectIfrmAppPrinc(){
         try {
             WebElement iframe = driver.findElement(By.id("ifrmAppPrinc"));
             driver.switchTo().frame(iframe);
@@ -58,7 +58,7 @@ public class TestBase {
         }
     }
 
-    protected void selectcIframeParcelamento(){
+    protected void selectcCframe1(){
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement iframe1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("cframe1")));
@@ -70,7 +70,7 @@ public class TestBase {
         }
     }
 
-    protected void selectcIframeOcorrencia(){
+    protected void selectcCframe3(){
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement iframe2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("cframe3")));

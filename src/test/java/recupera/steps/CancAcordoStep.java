@@ -38,7 +38,7 @@ public class CancAcordoStep extends TestBase {
         consultaTasks.aguardarMenuOperacao();
         consultaTasks.menuOperacao();
 
-        selectIframeOcorrencia();
+        selectIfrmAppPrinc();
 
         consultaTasks.codCliente();
         consultaTasks.bntConsult();
@@ -50,7 +50,7 @@ public class CancAcordoStep extends TestBase {
         cancAcordoTasks.marcAcordo();
         acordoTasks.bntParc();
 
-        selectcIframeParcelamento();
+        selectcCframe1();
 
         cancAcordoTasks.botaoExcluir();
 
@@ -64,7 +64,7 @@ public class CancAcordoStep extends TestBase {
         Thread.sleep(5000);
 
         defaultContent();
-        selectIframeOcorrencia();
+        selectIfrmAppPrinc();
 
         consultaTasks.validProduto();
 

@@ -31,7 +31,7 @@ public class ConsultaStep extends TestBase {
 
     @E("pesquiso pelo cliente")
     public void pesquisoPeloCliente() {
-        selectIframeOcorrencia();
+        selectIfrmAppPrinc();
 
         consultaTasks.codCliente();
         consultaTasks.bntConsult();
