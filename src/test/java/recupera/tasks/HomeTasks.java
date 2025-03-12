@@ -38,31 +38,29 @@ public class HomeTasks extends HomePage {
 
         loginButton.click();
 
-//        try {
-//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//
-//            Alert alerta = wait.until(ExpectedConditions.alertIsPresent());
-//
-//            if (alerta != null) {
-//                String mensagem = alerta.getText();
-//                System.out.println("Mensagem do alerta: " + mensagem);
-//
-//                assertEquals("LIC_RL006: O Operador já esta conectado no sistema.", mensagem);
-//
-//                alerta.accept();
-//
-//                user.clear();
-//                user.sendKeys("AUTOM2");
-//                password.clear();
-//                password.sendKeys("renner100");
-//                empresaDropdown.click();
-//                empresaOption.click();
-//                loginButton.click();
-//
-//            }
-//        } catch (Exception e) {
-//            System.out.println("Nenhum alerta foi exibido.");
-//        }
+        try {
+            Alert alerta = driver.switchTo().alert();
+
+            if (alerta != null) {
+                String mensagem = alerta.getText();
+                System.out.println("Mensagem do alerta: " + mensagem);
+
+                assertEquals("LIC_RL006: O Operador já esta conectado no sistema.", mensagem);
+
+                alerta.accept();
+
+                user.clear();
+                user.sendKeys("AUTOM2");
+                password.clear();
+                password.sendKeys("renner100");
+                empresaDropdown.click();
+                empresaOption.click();
+                loginButton.click();
+
+            }
+        } catch (Exception e) {
+            System.out.println("Nenhum alerta foi exibido.");
+        }
 
     }
 
